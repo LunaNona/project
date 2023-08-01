@@ -5,11 +5,112 @@
       color="#faebd7">-->
     <ul>
       <!-- #FFE0B2 -->
-      <li><a href="">ارتباط با ما</a></li>
-      <li><a href="">درباره ما</a></li>
-      <li><a href="">مشتریان</a></li>
-      <li><a href="">محصولات</a></li>
-      <li><a href="">همکاری</a></li>
+      <li><a href="" class="">ارتباط با ما</a></li>
+      <li><a href="" class="">درباره ما</a></li>
+      <li><a href="" class=""><template>
+          <div class="text-center">
+            <v-menu
+              open-on-hover
+              buttom
+              offset-y
+              class="text-center-menu"
+            >
+              <template v-slot:activator="{ on, attrs, props }">
+                <div
+                  color="primary"
+                  v-bind="attrs"
+                  v-on="on"
+                  class="text-center-content par-1 mar-1"
+                ><!--v-btn boud ke div kardamesh-->
+                  مشتریان
+                </div>
+              </template>
+
+              <v-list
+              class="light-green darken-2">
+                <v-list-item
+                  v-for="(costumer, index) in costumer"
+                  :key="index"
+                >
+                  <!-- <v-list-item-title>{{ item.title }}</v-list-item-title> -->
+
+
+                  <v-hover
+        v-slot="{ hover }"
+        open-delay="200"
+      >
+        <v-card
+          :elevation="hover ? 16 : 1"
+          :class="{ 'on-hover': hover }"
+          class="ma-1  light-green darken-2"
+          >
+                  <v-list-item-content class="nav-list-item-content " >
+                    <v-spacer>
+                      <a :href="costumer.link" class="nav-menu-home  ma-3 mt-n1 text-right">
+                        <v-list-item-title v-text="costumer.text" class="v-text"></v-list-item-title><!-- hamzaman v-for bezanam va link bezaram -->
+                      </a>
+                    </v-spacer>
+                  </v-list-item-content>
+                </v-card>
+                  </v-hover>
+                </v-list-item> 
+              </v-list>
+            </v-menu>
+          </div>
+        </template></a></li>
+      <li><a href=""><template>
+          <div class="text-center">
+            <v-menu
+              open-on-hover
+              buttom
+              offset-y
+              class="text-center-menu"
+            >
+              <template v-slot:activator="{ on, attrs, props }">
+                <div
+                  color="primary"
+                  v-bind="attrs"
+                  v-on="on"
+                  class="text-center-content par-1 mar-1"
+                ><!--v-btn boud ke div kardamesh-->
+                  همکاران
+                </div>
+              </template>
+
+              <v-list
+              class="light-green darken-2">
+                <v-list-item
+                  v-for="(cooparation, index) in cooparation"
+                  :key="index"
+                >
+                  <!-- <v-list-item-title>{{ item.title }}</v-list-item-title> -->
+
+
+                  <v-hover
+        v-slot="{ hover }"
+        open-delay="200"
+      >
+        <v-card
+          :elevation="hover ? 16 : 1"
+          :class="{ 'on-hover': hover }"
+          class="ma-1  light-green darken-2"
+          >
+                  <v-list-item-content class="nav-list-item-content " >
+                    <v-spacer>
+                      <a :href="cooparation.link" class="nav-menu-home  ma-3 mt-n1 text-right">
+                        <v-list-item-title v-text="cooparation.text" class="v-text"></v-list-item-title><!-- hamzaman v-for bezanam va link bezaram -->
+                      </a>
+                    </v-spacer>
+                  </v-list-item-content>
+                </v-card>
+                  </v-hover>
+                </v-list-item> 
+              </v-list>
+            </v-menu>
+          </div>
+        </template></a></li>
+      
+
       <li><a href="">
         <template>
           <div class="text-center">
@@ -19,33 +120,54 @@
               offset-y
               class="text-center-menu"
             >
-              <template v-slot:activator="{ on, attrs }">
+              <template v-slot:activator="{ on, attrs, props }">
                 <div
-                  color="#faebd7"
+                  color="primary"
                   v-bind="attrs"
                   v-on="on"
+                  class="text-center-content"
                 ><!--v-btn boud ke div kardamesh-->
-                  خانه
+                  محصولات
                 </div>
               </template>
-              <v-list>
+
+              <v-list
+              class="light-green darken-2">
                 <v-list-item
                   v-for="(item, index) in items"
                   :key="index"
                 >
                   <!-- <v-list-item-title>{{ item.title }}</v-list-item-title> -->
-                  <v-list-item-content>
+
+
+                  <v-hover
+        v-slot="{ hover }"
+        open-delay="200"
+      >
+        <v-card
+          :elevation="hover ? 16 : 1"
+          :class="{ 'on-hover': hover }"
+          class="ma-1 pa-0 light-green darken-2"
+          >
+                  <v-list-item-content class="nav-list-item-content " >
                     <v-spacer>
-                      <a :href="item.link" class="nav-menu-home ma-3 red--text elevation-4">
-                        <v-list-item-title v-text="item.text"></v-list-item-title><!-- hamzaman v-for bezanam va link bezaram -->
+                      <a :href="item.link" class="nav-menu-home  ma-3 mt-n1 text-right">
+                        <v-list-item-title v-text="item.text" class="v-text"></v-list-item-title><!-- hamzaman v-for bezanam va link bezaram -->
                       </a>
                     </v-spacer>
                   </v-list-item-content>
+                </v-card>
+                  </v-hover>
                 </v-list-item> 
               </v-list>
             </v-menu>
           </div>
         </template></a></li>
+      
+      <li><a href="">خانه</a></li>
+
+
+      
     </ul>
   <!-- </v-toolbar> -->
     <div class="ravanlog"><!-- <v-avatar image="" class="ravanlog-avatar"></v-avatar> -->
@@ -122,6 +244,7 @@
             </a>
           </div>
 
+          
           <div class="products-content-logo" id="hospital-logo">
             <a href="">
               <hospitalIcon/>
@@ -316,7 +439,12 @@
   </div>  
 </template>
 
-
+<!-- <style lang="sass" scoped>
+.v-card.on-hover.v-theme--dark
+  background-color: rgba(#FFF, 0.8)
+  >.v-card__text
+    color: #000
+</style> -->
 <script>
   import ravanlog from '~/components/ravanlog.vue'
   import maghzineh from '~/components/maghzineh.vue'
@@ -343,15 +471,48 @@
     data: () => (
         {
           items: [
-            { title: 'Click Me \n',
-              text: 'hello \n' ,
+            { title: 'Click Me',
+              text: ' بازی شناختی/مغزینه' ,
               link:'http://parscognition.ir/%d8%a8%d8%a7%d8%b2%db%8c%e2%80%8c%d9%87%d8%a7%db%8c-%d8%b4%d9%86%d8%a7%d8%ae%d8%aa%db%8c/'},
-            { title: 'Click Me \n',
-              text: 'hallo \n' ,
+            { title: 'Click Me',
+              text: 'مغزینه کلینیک' ,
               link:'http://parscognition.ir/%da%a9%d9%84%db%8c%d9%86%db%8c%da%a9%e2%80%8c%d9%87%d8%a7%db%8c-%d8%b1%d9%88%d8%a7%d9%86%d8%b4%d9%86%d8%a7%d8%b3%db%8c-%d9%88-%d8%b1%d9%88%d8%a7%d9%86%d9%be%d8%b2%d8%b4%da%a9%db%8c/'},
-            { title: 'Click Me \n',
-              text: 'chao \n',
+            { title: 'Click Me',
+              text: 'مغزینه مدارس',
               link:'http://parscognition.ir/%d9%85%d8%ba%d8%b2%db%8c%d9%86%d9%87-%d9%85%d8%af%d8%a7%d8%b1%d8%b3/' }
+          ],
+          cooparation: [
+            {text:"دانشکده روانشناسی و علوم تربیتی دانشگاه تهران",
+            link:"https://psyedu.ut.ac.ir/"},
+            {
+              text:"دانشکده روانشناسی دانشگاه آزاد اسلامی-واحد علوم تحقیقات",
+              link:"https://srbiau.ac.ir/fa"
+            },
+            {
+              text:"کلینیک آتیه",
+              link:"https://atiehclinic.com/"
+            },
+            {
+              text:"بیمارستان شریعتی",
+              link:"https://shariati.tums.ac.ir/"
+            }
+          ],
+          costumer: [
+            {text:"کلینیک مغز و شناخت",
+            link:"https://bcclinic.ir/"},
+            {text:"کلینیک چند تخصصی درد آرامش",
+            link:"https://coolaser.clinic/ar/lecheniye-stvolovimi-kletkami/"},
+            {text:"کلینیک آسایش",
+            link:"http://parscognition.ir/#"},
+            {text:"کلینیک دانشگاه الزهرا",
+            link:"https://www.alzahra.ac.ir/"},
+            {text:"مدارس سلام",
+            link:"https://www.salamsch.com/"},
+            {text:"مدارس فرزانگان",
+            link:"http://farzanegan1edu.ir/"},
+            {text:"باشگاه دانش آموزی دانشگاه تهران",
+            link:"https://tcs.ut.ac.ir/"}
+
           ]
         }
       )
@@ -410,6 +571,7 @@
   .products-content-logo p{
         display: flex;
         justify-content: center;
+        
         color: rgb(128, 95, 12);
       }
   .products-content-logo:hover{
@@ -434,6 +596,12 @@
     background-color: antiquewhite;
     /* position: sticky; */
   }
+  .text-center-content{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    margin-left: 10px;
+  }
   .text-center{
     display: flex;
     flex-wrap: wrap;
@@ -449,12 +617,7 @@
     height: auto;
     transition: background-color="#436039";
   }
-  .nav-menu-home:hover{
-    background-color: #436039;
-    color: aliceblue;
-    width: auto;
-    transition-delay: 0.25s;
-  }
+  
   .nav-content ul{
     display: flex;
     flex-wrap: wrap;
@@ -507,19 +670,19 @@
   }
   .atieh a img{
     height: 180px;
-    width: 200px;
+    width: auto;
   }
   .shariati a img{
     height: 180px;
-    width: 200px;
+    width: auto;
   }
   .tehran a img{
     height: 180px;
-    width: 200px;
+    width: auto;
   }
   .oloum a img{
     height: 180px;
-    width: 200px;
+    width: auto;
   }
 
   .atieh a img:hover {
@@ -620,6 +783,8 @@
   .contact-columns{
     display: grid;
     grid-template-columns: auto 300px 50px 400px;
+    margin-bottom: 20px;
+
   }
   .contact-column2-rows{
     display: grid;
@@ -670,5 +835,24 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+  .nav-menu-home{
+    direction: rtl;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: right; */
+    display: block;
+    background-color: #689F38;
+    text-decoration: none; 
+  }
+  .nav-menu-home:hover{
+    display: block;
+    color: aliceblue;
+    width: auto;
+    transition-delay: 0.25s;
+    
+  }
+  .nav-list-item-content .nav-menu-home .v-text{
+    color: aliceblue;
   }
 </style>

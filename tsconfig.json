@@ -1,0 +1,44 @@
+{
+    "compilerOptions": {
+      "target": "es2018",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "lib": [
+        "esnext",
+        "esnext.asynciterable",
+        "dom"
+      ],
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "allowJs": true,
+      "sourceMap": true,
+      "strict": true,
+      "noEmit": true,
+      "experimentalDecorators": true,
+      "baseUrl": ".",
+      "paths": {
+        "~/*": [
+          "./*"
+        ],
+        "@/*": [
+          "./*"
+        ]
+      },
+      "types": [
+        "@types/node",
+        "@nuxt/types",
+        "@nuxtjs/vuetify",
+        "./types/",
+        "@nuxtjs/firebase"
+      ],
+      "noImplicitAny": false
+    },
+    "exclude": [
+      "node_modules",
+      ".nuxt",
+      "dist"
+    ]
+  }
+  
+  
+  
