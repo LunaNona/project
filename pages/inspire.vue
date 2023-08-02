@@ -1,28 +1,13 @@
+
 <template >
   <div>
     <v-btn v-for="item in a">
-
       {{ item }}
     </v-btn>
   </div> 
 </template>
 
-<!-- <style lang="sass" scoped>
-.v-card.on-hover.v-theme--dark
-  background-color: rgba(#FFF, 0.8)
-  >.v-card__text
-    color: #000
-</style> -->
 <script lang="ts">
-  // import ravanlog from '~/components/ravanlog'
-  // import maghzineh from '~/components/maghzineh.vue'
-  // import hospitalIcon from '~/components/hospitalIcon.vue'
-  // import gamingIcon  from '~/components/gamingIcon.vue'
-  // import schoolIcon from '~/components/scoolIcon.vue'
-  // import ravanlog2 from '~/components/ravanlog2.vue'
-  // import contactEmail from '~/components/contact-email.vue'
-  // import contactPhone from '~/components/contact-phone.vue'
-  // import contactHouse from '~/components/contact-house.vue'
   import {Vue} from "nuxt-property-decorator"
   export default  class index extends Vue{
     text="nima"
@@ -33,21 +18,6 @@
     hi(){
       console.log("Helloi")
     }
-    // components: {
-    //   ravanlog ,
-    //   maghzineh ,
-    //   hospitalIcon ,
-    //   gamingIcon , 
-    //   schoolIcon ,
-    //   ravanlog2 ,
-    //   contactEmail,
-    //   contactPhone,
-    //   contactHouse
-    // },
-    // data: () => (
-    //     {
-    //       items: [
-    //         { title: 'Click Me',
     //           text: ' بازی شناختی/مغزینه' ,
     //           link:'http://parscognition.ir/%d8%a8%d8%a7%d8%b2%db%8c%e2%80%8c%d9%87%d8%a7%db%8c-%d8%b4%d9%86%d8%a7%d8%ae%d8%aa%db%8c/'},
     //         { title: 'Click Me',

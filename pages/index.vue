@@ -29,7 +29,7 @@
               <v-list
               class="light-green darken-2">
                 <v-list-item
-                  v-for="(costumer, index) in costumer"
+                  v-for="(costumer, index) in costumers"
                   :key="index"
                 >
                   <!-- <v-list-item-title>{{ item.title }}</v-list-item-title> -->
@@ -80,7 +80,7 @@
               <v-list
               class="light-green darken-2">
                 <v-list-item
-                  v-for="(cooparation, index) in cooparation"
+                  v-for="(cooparation, index) in cooparations"
                   :key="index"
                 >
                   <!-- <v-list-item-title>{{ item.title }}</v-list-item-title> -->
@@ -445,7 +445,7 @@
   >.v-card__text
     color: #000
 </style> -->
-<script>
+<script lang="ts">
   import ravanlog from '~/components/ravanlog.vue'
   import maghzineh from '~/components/maghzineh.vue'
   import hospitalIcon from '~/components/hospitalIcon.vue'
@@ -455,8 +455,9 @@
   import contactEmail from '~/components/contact-email.vue'
   import contactPhone from '~/components/contact-phone.vue'
   import contactHouse from '~/components/contact-house.vue'
-
-  export default {
+     
+  import {Vue,Component} from "nuxt-property-decorator"
+  @Component({
     components: {
       ravanlog ,
       maghzineh ,
@@ -467,10 +468,11 @@
       contactEmail,
       contactPhone,
       contactHouse
-    },
-    data: () => (
-        {
-          items: [
+      }    })
+  export default  class index extends Vue{
+    
+
+          items= [
             { title: 'Click Me',
               text: ' بازی شناختی/مغزینه' ,
               link:'http://parscognition.ir/%d8%a8%d8%a7%d8%b2%db%8c%e2%80%8c%d9%87%d8%a7%db%8c-%d8%b4%d9%86%d8%a7%d8%ae%d8%aa%db%8c/'},
@@ -480,8 +482,8 @@
             { title: 'Click Me',
               text: 'مغزینه مدارس',
               link:'http://parscognition.ir/%d9%85%d8%ba%d8%b2%db%8c%d9%86%d9%87-%d9%85%d8%af%d8%a7%d8%b1%d8%b3/' }
-          ],
-          cooparation: [
+          ]
+          cooparations= [
             {text:"دانشکده روانشناسی و علوم تربیتی دانشگاه تهران",
             link:"https://psyedu.ut.ac.ir/"},
             {
@@ -496,8 +498,8 @@
               text:"بیمارستان شریعتی",
               link:"https://shariati.tums.ac.ir/"
             }
-          ],
-          costumer: [
+          ]
+          costumers= [
             {text:"کلینیک مغز و شناخت",
             link:"https://bcclinic.ir/"},
             {text:"کلینیک چند تخصصی درد آرامش",
@@ -514,9 +516,7 @@
             link:"https://tcs.ut.ac.ir/"}
 
           ]
-        }
-      )
-    }
+          }
 
 </script>
 <style>
