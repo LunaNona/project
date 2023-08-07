@@ -264,24 +264,62 @@
           <div><p>همکاران ما</p></div>
 
           <div class="cooporation-container">
-            <div class="atieh"><a href=""><img src="http://parscognition.ir/wp-content/uploads/2018/05/atiehback_21.png" alt=""></a></div>
-            <div class="shariati"><a href=""><img src="http://parscognition.ir/wp-content/uploads/2018/05/shariatihos.png" alt=""></a></div>
+            
+
+
+
+
+            <!-- <div ><a href=""><img src="http://parscognition.ir/wp-content/uploads/2018/05/atiehback_21.png" alt=""></a></div> -->
+            <!-- <div class="shariati"><a href=""><img src="http://parscognition.ir/wp-content/uploads/2018/05/shariatihos.png" alt=""></a></div>
             <div class="tehran"><a href=""><img src="http://parscognition.ir/wp-content/uploads/2018/05/tehranuni.png" alt=""></a></div>
             <div class="oloum"><a href=""><img src="http://parscognition.ir/wp-content/uploads/2018/05/azaduni.png" alt=""></a></div>
-          </div>
+         --> </div> 
 
         </div>
+        <v-hover
+        v-slot="{hover}">
         <div class="row-cooporation-container">
           <v-row no-gutters class="cooporation-container">
             <v-col cols="4" sm="12">
-              <a href="" class="atieh"><img src="http://parscognition.ir/wp-content/uploads/2018/05/atiehback_21.png" alt=""></a>
-            </v-col>
-            <v-col cols="4" sm="12" class="atieh"><a href=""><img src="http://parscognition.ir/wp-content/uploads/2018/05/shariatihos.png" alt=""></a></v-col>
-            <v-col cols="4" sm="12" class="atieh"><a href=""><img src="http://parscognition.ir/wp-content/uploads/2018/05/tehranuni.png" alt=""></a></v-col>
-            <v-col cols="4" sm="12" class="atieh"><a href=""><img src="http://parscognition.ir/wp-content/uploads/2018/05/azaduni.png" alt=""></a></v-col>
+              <!-- <a href="" class="atieh"><img src="http://parscognition.ir/wp-content/uploads/2018/05/atiehback_21.png" alt=""></a>
+            </v-col> -->
+            <v-img
+            class="atieh"
+            :height="180"
+            :width="200"
+            :class="{'on-hover':hover}"
+            :opacity="hover ? 0.7 : 1"
+            cover
+  src="http://parscognition.ir/wp-content/uploads/2018/05/atiehback_21.png"
+></v-img></v-col>
+
+            <v-col cols="4" sm="12" class="atieh"><v-img
+            class="shariati"
+            :height="200"
+            :width="200"
+
+            cover
+  src="http://parscognition.ir/wp-content/uploads/2018/05/shariatihos.png"
+></v-img></v-col>
+            <v-col cols="4" sm="12" class="atieh"><v-img
+            class="tehran"
+            :height="200"
+            :width="200"
+            cover
+  src="http://parscognition.ir/wp-content/uploads/2018/05/tehranuni.png"
+></v-img></v-col>
+            <v-col cols="4" sm="12" class="atieh"><v-img
+            class="oloum"
+            :height="180"
+            :width="200"
+
+            cover
+  src="http://parscognition.ir/wp-content/uploads/2018/05/azaduni.png"
+></v-img></v-col>
+
           </v-row>
         </div>
-
+      </v-hover>
         <div class="latest-news-container-rows">
           <h1>اخرین اخبار</h1>
           <div class="latest-news-container-columns">
@@ -668,7 +706,7 @@
     background-color: antiquewhite;
     margin-top: 50px;
   }
-  .atieh a img{
+  /* .atieh a img{
     height: 180px;
     width: auto;
   }
@@ -683,7 +721,7 @@
   .oloum a img{
     height: 180px;
     width: auto;
-  }
+  } */
 
   .atieh a img:hover {
     opacity: 0.7;
